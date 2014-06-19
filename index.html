@@ -1,18 +1,25 @@
 <!DOCTYPE html>
-<html lang="en" data-ng-app>
+<html lang="en" data-ng-app="nbaApp">
 <head>
   <meta charset="UTF-8">
   <title>AngularJS Directives and Data Binding</title>
   <link rel="stylesheet" type="text/css" href="css/bootstrap.min.css" />
   <link rel="stylesheet" href="css/style.css" media="all">
+</head>
+
+<body>
+  <div data-ng-controller= "playerController">
+    <p>Name:</p>
+    <br />
+    <input type= "text" data-ng-model="nameText" /> {{ nameText }}
+    <br />
+    <ul>
+      <li data-ng-repeat="player in nbaPlayers | filter:nameText | orderBy:'name'">{{ player.name }} - {{ player.team | uppercase }}
+      </li>
+    </ul>
+  </div>
+
   <script src="js/angular.js"></script>
   <script type="text/javascript" src="js/index.js"></script>
-</head>
-<body>
-  Name:
-  <br />
-  <input type= "text" data-ng-model="name" /> {{ name }}
-
-
 </body>
 </html>
