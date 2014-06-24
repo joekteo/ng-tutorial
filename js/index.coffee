@@ -1,5 +1,6 @@
 nbaApp = angular.module "nbaApp", []
 
+nbaApp.config(function ($))
 nbaApp.controller 'playerController', ['$scope', ($scope) ->
   $scope.nbaPlayers = [
       {name:'Kobe Bryant', team:'Lakers'},

@@ -13,11 +13,15 @@
     <br />
     <input type= "text" data-ng-model="nameText" /> {{ nameText }}
     <br />
-    <ul>
-      <li data-ng-repeat="player in nbaPlayers | filter:nameText | orderBy:'name'">{{ player.name }} - {{ player.team | uppercase }}
-      </li>
-    </ul>
+    <table>
+      <tr data-ng-repeat="player in nbaPlayers | filter:nameText | orderBy:'name'">
+      <td>{{ player.name }} </td>
+      <td>{{ player.team | uppercase }} </td>
+      </tr>
+    </table>
   </div>
+
+
 
   <script src="js/angular.js"></script>
   <script type="text/javascript" src="js/index.js"></script>
