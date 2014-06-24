@@ -8,20 +8,21 @@
 </head>
 
 <body>
-  <div data-ng-controller= "playerController">
-    <p>Name:</p>
-    <br />
-    <input type= "text" data-ng-model="nameText" /> {{ nameText }}
-    <br />
-    <table>
-      <tr data-ng-repeat="player in nbaPlayers | filter:nameText | orderBy:'name'">
-      <td>{{ player.name }} </td>
-      <td>{{ player.team | uppercase }} </td>
-      </tr>
-    </table>
+
+  <div class='column'>
+    <div data-ng-controller= "playerController">
+      <p>NBA Stars:</p>
+      <br />
+      <input class="text" type= "text" data-ng-model="nameText" /> {{ nameText }}
+      <br />
+      <table>
+        <tr data-ng-repeat="player in nbaPlayers | filter:nameText | orderBy:'name'">
+        <td>{{ player.name }} </td>
+        <td>{{ player.team | uppercase }} </td>
+        </tr>
+      </table>
+    </div>
   </div>
-
-
 
   <script src="js/angular.js"></script>
   <script type="text/javascript" src="js/index.js"></script>

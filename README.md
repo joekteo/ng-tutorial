@@ -1,3 +1,3 @@
 ng-tutorial
 ===========
-practicing AngularJS fundamentals
+angularjs directive and data binding practice

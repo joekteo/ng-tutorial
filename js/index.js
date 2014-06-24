@@ -37,6 +37,12 @@
         }, {
           name: 'Lavoy Allen',
           team: 'Pacers'
+        }, {
+          name: 'Chris Bosh',
+          team: 'Heat'
+        }, {
+          name: 'Tony Allen',
+          team: 'Grizzlies'
         }
       ];
     }
