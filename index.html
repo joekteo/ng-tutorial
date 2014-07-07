@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en" data-ng-app="nbaApp">
+
 <head>
   <meta charset="UTF-8">
   <title>AngularJS Directives and Data Binding</title>
@@ -8,23 +9,23 @@
 </head>
 
 <body>
-
-  <div class='column'>
-    <div data-ng-controller= "playerController">
+  <div class="column">
+    <div data-ng-controller="playerController">
       <p>NBA Stars:</p>
       <br />
-      <input class="text" type= "text" data-ng-model="nameText" /> {{ nameText }}
+      <input class="text" type= "text" data-ng-model="nameText" />
+      <p>{{ nameText }}</p>
       <br />
       <table>
         <tr data-ng-repeat="player in nbaPlayers | filter:nameText | orderBy:'name'">
-        <td>{{ player.name }} </td>
-        <td>{{ player.team | uppercase }} </td>
+        <td>{{ player.name }}</td>
+        <td>{{ player.team | uppercase }}</td>
         </tr>
       </table>
     </div>
   </div>
-
   <script src="js/angular.js"></script>
   <script type="text/javascript" src="js/index.js"></script>
 </body>
+
 </html>
